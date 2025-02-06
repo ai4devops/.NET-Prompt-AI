@@ -17,13 +17,20 @@ The method isEvenOrOdd called with the parameter 4, like this isEvenOrOdd(4), sh
 Now it's your turn to integrate your prompt below: 👀
 
 ```
-Create a prompt for the model to generate a .NET method
+Generate a method in C# that accept a number and return odd if it is odd or even of it is even
 ```
 
 What was the response?
 
 ```csharp
-Write AI response here
+public string IsEvenOrOdd(int number)
+{
+    if (number % 2 == 0)
+    {
+        return "Even";
+    }
+    return "Odd";
+}
 ```
 
 ## 2️⃣ Use Case 2: Create a New Prompt for the Model to Generate a .NET method with a Specific Response Structure
@@ -39,13 +46,19 @@ Input: isPalindrome("Bonjour") > Output: false
 Now it's your turn to integrate your prompt below: 👀
 
 ```
-Create a new prompt for the model to generate a .NET method with a specific response structure
+Generate a C# method that take a string in parameter and can be read in both ways like radar or kayak
 ```
 
 What was the response?
 
 ```csharp
-Write AI response here
+public bool IsPalindrome(string word)
+{
+    char[] charArray = word.ToCharArray();
+    Array.Reverse(charArray);
+    string reversed = new string(charArray);
+    return word == reversed;
+}
 ```
 
 ## 3️⃣ Use Case 3: Compare Your Two Responses and Test Other Response Structures
